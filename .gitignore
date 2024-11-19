@@ -163,3 +163,7 @@ cython_debug/
 
 # DB config 
 config.py
+
+./dump.json
+dump
+dump.json
