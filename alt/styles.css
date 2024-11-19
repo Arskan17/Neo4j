@@ -1,0 +1,43 @@
+/* styles.css */
+.chat-container {
+    width: 300px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.chat-box {
+    height: 200px;
+    overflow-y: auto;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.suggestions button {
+    background-color: #f1f1f1;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.suggestions button:hover {
+    background-color: #ddd;
+}
+
+input[type="text"] {
+    width: calc(100% - 60px);
+    padding: 5px;
+    margin-right: 5px;
+}
+
+button {
+    padding: 5px 10px;
+}

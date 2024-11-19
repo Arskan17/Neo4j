@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 from neo4j import GraphDatabase
 from config import cfg
+import json
 
 app = Flask(__name__)
 
@@ -28,6 +29,10 @@ def query_neo4j():
         with driver.session() as session:
             result = session.run(query)
             records = [record.data() for record in result]
+
+            with open("dump.json", "w") as json_file:
+                json.dump(records, json_file, indent=4)
+
             return jsonify(records)
     except Exception as e:
         return jsonify({"error": str(e)}), 500
